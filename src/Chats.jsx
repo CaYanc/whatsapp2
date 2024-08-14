@@ -138,6 +138,7 @@ const Chats = () => {
             readOnly
             className="filtro_filtro_input "
             autoFocus
+
           />
           <input
             type="text"
@@ -167,7 +168,7 @@ const Chats = () => {
                   setRegresar(false);
               }}
             >
-              <figure className="w-[40px] h-[40px] rounded-full bg-black">
+              <figure className="w-[40px] h-[40px] rounded-full ">
                 <img src="" alt="" />
               </figure>
               <article className=" w-[70%]">

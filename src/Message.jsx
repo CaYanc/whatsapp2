@@ -104,7 +104,7 @@ const Message = ({ nombre, idUsuario }) => {
           <div className="icon_regresar" onClick={()=>{funRegresar()}}>
             <RiArrowLeftLine className="text-[20px]" />
           </div>
-          <figure className="w-[35px] h-[35px] rounded-full bg-black">
+          <figure className="w-[35px] h-[35px] rounded-full ">
             <img src="" alt="" />
           </figure>
           <p>{nombre}</p>

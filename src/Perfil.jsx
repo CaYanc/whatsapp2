@@ -60,7 +60,7 @@ const Perfil = () => {
         Perfil
       </div>
       <div className="foto_perfil relative">
-        <figure className="w-[180px] h-[180px] rounded-full bg-black ">
+        <figure className="w-[180px] h-[180px] rounded-full">
           <img src="" alt="" />
         </figure>
         <span className="edit_foto absolute bottom-3 right-2 bg-[#15cc05] text-[23px] text-white w-[40px] h-[40px] rounded-full flex items-center justify-center">

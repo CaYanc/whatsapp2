@@ -35,12 +35,19 @@ $color_primario : #008069;
         background-color: #eee;
         display: flex;
         justify-content: space-between;
+        position: sticky;
 
         .usuario_message{
             display: flex;
             align-items: center;
             gap: 5px;
             font-size: 14px;
+
+            figure{
+                background-image: url("../assets/fondofoto.jpg");
+                background-position: center;
+                background-size: contain;
+            }
 
             .icon_regresar{
                 display: none;
@@ -250,6 +257,9 @@ $color_primario : #008069;
 
             figure{
                 position: relative;
+                    background-image: url("../assets/fondofoto.jpg");
+                    background-position: center;
+                    background-size: contain;
 
                 span{
                     position: absolute;
@@ -312,7 +322,6 @@ $color_primario : #008069;
                 border-radius: 5px;
                 padding: 3px 5px 3px 35px;
                 font-size: 13px;
-                text-align: center;
             }
         }
 
@@ -353,6 +362,12 @@ $color_primario : #008069;
             justify-content: space-between;
             align-items: center;
             padding: 7px 15px 7px 0;
+
+            figure{
+                background-image: url("../assets/fondofoto.jpg");
+                background-position: center;
+                background-size: contain;
+            }
 
             article{
                 border-bottom: 1px solid #eee;

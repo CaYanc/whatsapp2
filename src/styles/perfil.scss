@@ -12,6 +12,15 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    .foto_perfil{
+
+        figure{
+            background-image: url("../assets/fondofoto.jpg");
+            background-position: center;
+            background-size: contain;
+        }
+    }
 }
 
 @media(max-width:800px ){
