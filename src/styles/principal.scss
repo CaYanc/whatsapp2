@@ -569,22 +569,33 @@ $color_primario : #008069;
         }
 
         .messages_usua_cont{
-            min-height: 86%;
+            min-height: 46%;
+            height: 86%;
         }
         .form_message{
             background-image: url('../assets/fondo.jpg');
             background-position: center;
-            background-size: contain;
+            background-size: cover;
             height: 8%;
+            position: relative;
+            justify-content: start;
+
+            .microfono{
+                position: absolute;
+                display: none;
+            }
           
     
             .form_icons{
-                font-size: 25px;
+                font-size: 20px;
+                position: absolute;
+                left: 5%;
             }
     
             .input_message{
-                width: 60%;
+                width: 90%;
                 border-radius: 50px;
+                padding-left: 20%;
                
             }
     

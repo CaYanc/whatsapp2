@@ -188,7 +188,7 @@ const Message = ({ nombre, idUsuario }) => {
           }}
         />
         <input className="submit_message" type="submit" value="⪢" />
-        <div className="form_icons">
+        <div className="form_icons microfono">
           <HiMicrophone />
         </div>
       </form>
