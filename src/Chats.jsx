@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./styles/principal.scss";
 
 // import
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsFillChatSquareTextFill, BsThreeDotsVertical } from "react-icons/bs";
 import { UserContext } from "./context/Provider";
 import { collection, getDocs, getFirestore } from "firebase/firestore/lite";
 import { onAuthStateChanged } from "firebase/auth/cordova";
@@ -12,7 +12,7 @@ import { auth } from "./firebase";
 import Message from "./Message";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { HiOutlineStatusOnline } from "react-icons/hi";
-import { MdOutlinePeopleAlt } from "react-icons/md";
+import { MdOutlineCall, MdOutlinePeopleAlt } from "react-icons/md";
 import { IoIosArrowDown, IoMdSearch } from "react-icons/io";
 import { FaAnchor } from "react-icons/fa";
 import { TiPin } from "react-icons/ti";
@@ -194,6 +194,24 @@ const Chats = () => {
             idUsuario={abrirUsuarioId}
           ></Message>
         )}
+      </div>
+      <div className="menu_bottonm">
+          <article>
+          <BsFillChatSquareTextFill />
+            <span>Chats</span>
+          </article>
+          <article>
+            <HiOutlineStatusOnline />
+            <span>Novedades</span>
+          </article>
+          <article>
+          <MdOutlinePeopleAlt />
+            <span>Comunidades</span>
+          </article>
+          <article>
+          <MdOutlineCall />
+            <span>Llamadas</span>
+          </article>
       </div>
     </div>
   );
