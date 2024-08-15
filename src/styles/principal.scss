@@ -216,13 +216,23 @@ $color_primario : #008069;
                     flex-direction: column;
                     gap: 10px;
 
+                   .form_input_cont{
+                    position: relative;
+
                     .form_input{
                         width: 100%;
                         padding: 4px 15px;
                         outline: none;
-                        box-shadow: inset 0 -10px 6px -10px #aaa;
-                        border-radius: 10px;
+                        border-bottom: 1px solid #15cc05;
+                        // border-radius: 10px;
                     }
+
+                  
+
+                }
+                
+
+                   
 
                     .form_btn{
                         background-color: #008069;
@@ -447,6 +457,76 @@ $color_primario : #008069;
         background: #888;
         // position: relative;
 
+        .menu_cont{
+    
+            .menu_btn_cont{
+                color: #555;
+                font-size: 25px;
+            }
+        }
+    
+        .filtros_cont{
+    
+            .filtro_input{
+    
+                input{
+                    border-radius: 50px;
+                    padding: 7px 5px 7px 35px;
+                    font-size: 13px;
+                }
+            }
+    
+        }
+    
+        .usuarios_cont{
+            width: 100%;
+            
+            .usuario{
+                width: 100%;
+                justify-content: flex-start;
+                gap: 5px;
+                position: relative;
+    
+                figure{
+                    width: 55px;
+                    height: 55px;
+                }
+
+                article{
+                    width:80%;
+                    padding-bottom: 5px;
+
+                    span{
+                        font-size: 18px;
+                    }
+                }
+    
+                div{
+                    position: absolute;
+                    right: 5%;
+                }
+    
+            }
+    
+            .usuario:hover{
+                background-color: #eee;
+                div{
+                    overflow-x: hidden;
+                    p{
+                        color: #999;
+                    }
+                    span{
+                        color: #999;
+                        display: flex;
+                        position: relative;
+                        right: 0%;
+    
+                    }
+                }
+    
+            }
+        }
+
     }
 
     .message_cont{
@@ -474,18 +554,22 @@ $color_primario : #008069;
         height: 100vh;
 
         .menu_cont_messages{
-            height: 8%;
+            height: 6%;
 
             .usuario_message{
+
+                
 
                 .icon_regresar{
                     display: block;
                 }
+
+
             }
         }
 
         .messages_usua_cont{
-            height: 84%;
+            min-height: 86%;
         }
         .form_message{
             background-image: url('../assets/fondo.jpg');
@@ -495,11 +579,12 @@ $color_primario : #008069;
           
     
             .form_icons{
-                font-size: 18px;
+                font-size: 25px;
             }
     
             .input_message{
                 width: 60%;
+                border-radius: 50px;
                
             }
     

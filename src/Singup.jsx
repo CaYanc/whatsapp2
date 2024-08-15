@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./context/Provider";
 
 // img
-import logo from './assets/logo.png'
-
+import logo from "./assets/logo.png";
 
 const Singup = () => {
   const {
@@ -63,24 +62,32 @@ const Singup = () => {
           </div>
           <div className="form_cont">
             <form className="form_form" action="">
-              <input
-                className="form_input"
-                type="text"
-                placeholder="Name"
-                onChange={(e) => setNombre(e.target.value)}
-              />
-              <input
-                className="form_input"
-                type="text"
-                placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                className="form_input"
-                type="text"
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="form_input_cont">
+                <input
+                  className="form_input"
+                  type="text"
+                  placeholder="Name"
+                  onChange={(e) => setNombre(e.target.value)}
+                />
+              </div>
+              <div className="form_input_cont">
+                <input
+                  className="form_input"
+                  type="text"
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="form_input_cont">
+                {" "}
+                <input
+                  className="form_input"
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+
               <div
                 className="form_btn"
                 onClick={() => {
@@ -89,7 +96,12 @@ const Singup = () => {
               >
                 SingUp
               </div>
-              <p className="text-[12px]">Ya tienes cuenta? <Link to={'/'} className="font-bold">Inicia sesion</Link></p>
+              <p className="text-[12px]">
+                Ya tienes cuenta?{" "}
+                <Link to={"/"} className="font-bold">
+                  Inicia sesion
+                </Link>
+              </p>
             </form>
           </div>
         </div>

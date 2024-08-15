@@ -33,10 +33,9 @@ import { Link } from "react-router-dom";
 import Chats from "./Chats";
 
 const Message = ({ nombre, idUsuario }) => {
-  const {setRegresar,funRegresar,regresar} = useContext(UserContext);
+  const { setRegresar, funRegresar, regresar } = useContext(UserContext);
 
   const db = getFirestore();
-  
 
   // guardar mensages
   const [activo, setActivo] = useState(null);
@@ -81,7 +80,7 @@ const Message = ({ nombre, idUsuario }) => {
   useEffect(() => {
     const mostrarMessage = async () => {
       try {
-        const collRef = collection(db,'messages');
+        const collRef = collection(db, "messages");
         const eventQuery = query(collRef, orderBy("fecha"));
         const querySnapchot = await getDocs(eventQuery);
         const docs = [];
@@ -98,10 +97,19 @@ const Message = ({ nombre, idUsuario }) => {
 
   return (
     // <div className="message absolute z-[200] top-0 right-0">
-    <div className={`message absolute z-[200] top-0 right-0 bg-[#eee] ${regresar ? 'right-[-100%]' : ''}`}>
+    <div
+      className={`message absolute z-[200] top-0 right-0 bg-[#eee] ${
+        regresar ? "right-[-100%]" : ""
+      }`}
+    >
       <div className="menu_cont_messages bg-slate-400 ">
         <div className="usuario_message">
-          <div className="icon_regresar" onClick={()=>{funRegresar()}}>
+          <div
+            className="icon_regresar"
+            onClick={() => {
+              funRegresar();
+            }}
+          >
             <RiArrowLeftLine className="text-[20px]" />
           </div>
           <figure className="w-[35px] h-[35px] rounded-full ">
@@ -152,7 +160,7 @@ const Message = ({ nombre, idUsuario }) => {
                   <br />
                   {/* {idUsuario} */}
                   <span className="text-[9px] text-[#aaa] self-end flex gap-1">
-                  {mess.hora}:{mess.minutos}
+                    {mess.hora}:{mess.minutos}
                     <BsCheckAll className="self-end text-[13px]" />
                   </span>
                 </div>
