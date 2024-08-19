@@ -123,9 +123,32 @@ const Provider = ({ children }) => {
     console.log(regresar)
   }
 
+
+  // tema oscuro
+
+  const [tema, setTema] = useState("light")
+  const [abrirTema, setAbrirTema] = useState(false)
+
+  const cambiarTema = ()=>{
+    setTema(tema == "light" ? "dark" : "light")
+  }
+
+  const funtAbrirTema = ()=>{
+    setAbrirTema(!abrirTema)
+
+  }
+
+
+
   return (
     <UserContext.Provider
       value={{
+        funtAbrirTema,
+        abrirTema,
+        setAbrirTema,
+        cambiarTema,
+        tema,
+        setTema,
         perfil,
         setPerfil,
         regresar,

@@ -98,11 +98,11 @@ const Message = ({ nombre, idUsuario }) => {
   return (
     // <div className="message absolute z-[200] top-0 right-0">
     <div
-      className={`message absolute z-[200] top-0 right-0 bg-[#eee] ${
+      className={`message absolute z-[200] top-0 right-0 bg-[#eee] dark:bg-[#0F1C24] ${
         regresar ? "right-[-100%]" : ""
       }`}
     >
-      <div className="menu_cont_messages bg-slate-400 ">
+      <div className="menu_cont_messages bg-slate-400 dark:bg-[#1C2D35] dark:text-white">
         <div className="usuario_message">
           <div
             className="icon_regresar"
@@ -132,7 +132,7 @@ const Message = ({ nombre, idUsuario }) => {
         </div>
       </div>
 
-      <div className="messages_usua_cont  overflow-y-scroll">
+      <div className="messages_usua_cont  overflow-y-scroll dark:fondoOscuro">
         <div className="p-1 flex flex-col px-[40px]">
           {liMessage.map((mess) =>
             mess.userid == idUsuario || mess.userid == activo ? (
@@ -140,7 +140,7 @@ const Message = ({ nombre, idUsuario }) => {
                 mess.recibe == activo ? (
                   <div
                     key={mess.text}
-                    className="w-fit py-1 flex px-2 bg-white my-1 rounded-md gap-2 text-[13px]"
+                    className="w-fit py-1 flex px-2 bg-white dark:bg-[#1C2D35] dark:text-white my-1 rounded-md gap-2 text-[13px]"
                   >
                     {mess.text}
                     <br />
@@ -155,7 +155,7 @@ const Message = ({ nombre, idUsuario }) => {
                   ""
                 )
               ) : idUsuario == mess.recibe ? (
-                <div className="w-fit py-1 px-2 bg-[#D9FDD3] my-1 relative self-end flex gap-2 rounded-md text-[13px]">
+                <div className="w-fit py-1 px-2 bg-[#D9FDD3] dark:bg-[#015E4B] dark:text-white my-1 relative self-end flex gap-2 rounded-md text-[13px]">
                   {mess.text}
                   <br />
                   {/* {idUsuario} */}
@@ -173,13 +173,13 @@ const Message = ({ nombre, idUsuario }) => {
           )}
         </div>
       </div>
-      <form onSubmit={guardarMessage} className="form_message">
+      <form onSubmit={guardarMessage} className="form_message dark:bg-[#1C2D35]">
         <div className="form_icons flex gap-2 items-center">
           <BsEmojiGrin />
           <GoPlus className="text-[30px]" />
         </div>
         <input
-          className="input_message"
+          className="input_message dark:border-black dark:bg-[#263c46]"
           value={messageGuardado}
           type="text"
           placeholder="Escribe un mensaje"

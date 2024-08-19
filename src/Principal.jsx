@@ -22,7 +22,7 @@ const Principal = () => {
 
       <div className={`message_cont  bg-[#eee] ${regresar ? 'right-[-100%]' : ''}`}>
         {/* <Message/> */}
-        <div className="z-[10] detras_message_cont pb-[30px] w-[100%] h-[100%] flex items-center justify-center gap-3 flex-col text-[#555] font-light">
+        <div className="dark:bg-[#1C2D35] z-[10] detras_message_cont pb-[30px] w-[100%] h-[100%] flex items-center justify-center gap-3 flex-col text-[#555] font-light">
             <figure className="w-[35%]">
               <img src={compupc} alt="" className="w-[100%]"/>
             </figure>

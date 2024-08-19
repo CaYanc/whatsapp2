@@ -76,13 +76,13 @@ const Chats = () => {
   };
 
   return (
-    <div className="chats">
+    <div className="chats dark:bg-[#0F1C24] ">
         {perfil && <Perfil />}
-      <div className="menu_cont relative flex justify-between">
-        <div className="menu_activo_cont flex gap-3 items-center">
+      <div className="menu_cont relative flex justify-between dark:bg-[#0F1C24] dark:text-white">
+        <div className="menu_activo_cont flex gap-3 items-center dark:text-white">
           <figure onClick={()=>{setPerfil(true)}} className="w-[30px] h-[30px] rounded-full bg-black">
             <img src="" alt="" />
-            <span>
+            <span className="dark:text-black">
               {usuarioRegistrado.map((usuReg) =>
                 usuReg.iduser == activo ? <div>{usuReg.nombre}</div> : ""
               )}
@@ -116,27 +116,27 @@ const Chats = () => {
             onClick={() => {
               cerrarSesion();
             }}
-            className="bg-[white] p-1 px-2 shadow-md shadow-slate-400 absolute z-50 transition-all top-[90%] right-0 "
+            className=" dark:bg-[#1C2D35] bg-[white] p-1 px-2 shadow-md shadow-slate-400 absolute z-50 transition-all top-[90%] right-0 "
           >
-            Cerrar sesion
+            Cerrar sesion <br />
           </div>
         ) : (
           ""
         )}
       </div>
-      <div className="filtros_cont">
+      <div className="filtros_cont dark:text-white">
         <div className="filtro_input relative">
-          <span className="absolute left-2 text-[#555]">
+          <span className="absolute left-2 text-[#555] ">
             <IoMdSearch />
           </span>
-          <input type="text" placeholder="Buscar" className="outline-none" />
+          <input type="text" placeholder="Buscar" className="outline-none dark:bg-[#1C2D35] "  />
         </div>
-        <div className="filtro_filtro">
+        <div className="filtro_filtro ">
           <input
+            className="filtro_filtro_input  "
             type="text"
             value="Todos"
             readOnly
-            className="filtro_filtro_input "
             autoFocus
 
           />
@@ -155,12 +155,12 @@ const Chats = () => {
         </div>
       </div>
       <div className="usuarios_cont w-[100%] ">
-        <div className="usuario"></div>
+        <div className="usuario "></div>
         {usuarioRegistrado.map((usuReg) =>
           usuReg.iduser !== activo ? (
             <div
               key={usuReg.iduser}
-              className="usuario"
+              className="usuario dark:text-white"
               onClick={() => {
                 setAbrirUsuario(true),
                   setAbrirUsuarioNombre(usuReg.nombre),
