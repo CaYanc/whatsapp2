@@ -16,9 +16,17 @@ import { auth } from "./firebase";
 import { TbSunHigh } from "react-icons/tb";
 
 const Perfil = () => {
-  const { perfil, setPerfil,cambiarTema, tema,setTema,setAbrirTema,abrirTema,funtAbrirTema } = useContext(UserContext);
+  const {
+    perfil,
+    setPerfil,
+    cambiarTema,
+    tema,
+    setTema,
+    setAbrirTema,
+    abrirTema,
+    funtAbrirTema,
+  } = useContext(UserContext);
 
- 
   const [usuarioRegistrado, setUsuarioRegistrado] = useState([]);
   const [activo, setActivo] = useState(null);
   const [activoNombre, setActivoNombre] = useState(null);
@@ -52,14 +60,17 @@ const Perfil = () => {
 
   mostrarUsuario();
 
-  useEffect(()=>{
-    if(tema == "dark"){
-      document.querySelector('html').classList.add('dark')
-    }else{
-      document.querySelector('html').classList.remove('dark')
-    }
-  }
-  ,[tema])
+  // useEffect(() => {
+  //   const handleTema = () => {
+  //     if (tema == "dark") {
+  //       document.querySelector("html").classList.add("dark");
+  //     } else {
+  //       document.querySelector("html").classList.remove("dark");
+  //     }
+  //   };
+
+  //   handleTema()
+  // }, [tema]);
 
   return (
     <div className="perfil dark:bg-[#0F1C24]">
@@ -96,19 +107,36 @@ const Perfil = () => {
 
           <br />
 
-          <div className="tema_cont" onClick={()=>{funtAbrirTema()}}>
+          <div
+            className="tema_cont"
+            onClick={() => {
+              funtAbrirTema();
+            }}
+          >
             <p className="text-[14px] text-black dark:text-white">Tema</p>
-
-            <span className="text-[10px]">{tema == "dark" ? "Oscuro" : "Claro"}</span> <br />
-
-            <span className= {`cambiador_cont flex items-center justify-center ${abrirTema ? "left-0" : ""}`}>
-              <button  onClick={()=>{cambiarTema(),funtAbrirTema()}} className="dark:bg-[#0F1C24] px-[20px] py-[5px] rounded-md text-white">Cambiar a <br />{tema == "dark" ? "Claro" : "Oscuro"}</button>
+            <span className="text-[10px]">
+              {tema == "dark" ? "Oscuro" : "Claro"}
+            </span>{" "}
+            <br />
+            <span
+              className={`cambiador_cont flex items-center justify-center ${
+                abrirTema ? "left-0" : ""
+              }`}
+            >
+              <button
+                onClick={() => {
+                  cambiarTema(), funtAbrirTema();
+                }}
+                className="dark:bg-[#0F1C24] px-[20px] py-[5px] rounded-md text-white"
+              >
+                Cambiar a <br />
+                {tema == "dark" ? "Claro" : "Oscuro"}
+              </button>
             </span>
           </div>
-         </div>
+        </div>
         <BiPencil className="text-[14px] text-[#15cc05]" />
       </div>
-
     </div>
   );
 };

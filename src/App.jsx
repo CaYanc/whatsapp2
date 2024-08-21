@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 // rutas
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -10,10 +12,11 @@ import Singup from "./Singup";
 import Principal from "./Principal";
 import Chats from "./Chats";
 import Message from "./Message";
-import Provider from "./context/Provider";
+import Provider, { UserContext } from "./context/Provider";
 
 function App() {
   return (
+
     <BrowserRouter>
       <Provider>
         <Routes>

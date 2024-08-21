@@ -131,6 +131,22 @@ const Provider = ({ children }) => {
 
   const cambiarTema = ()=>{
     setTema(tema == "light" ? "dark" : "light")
+
+    console.log(tema)
+    const handleTema = () => {
+      if (tema == "dark") {
+        document.querySelector("html").classList.add("dark");
+      } else {
+        document.querySelector("html").classList.remove("dark");
+      }
+    };
+    handleTema()
+
+    // if(tema == "dark"){
+    //       document.querySelector('html').classList.add('dark')
+    //     }else{
+    //       document.querySelector('html').classList.remove('dark')
+    //     }
   }
 
   const funtAbrirTema = ()=>{

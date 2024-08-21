@@ -9,12 +9,12 @@ const firebaseConfig = {
 
   // prueba
 
-  // apiKey: "AIzaSyBMJB0CWO1EaBW6guLFRuGqVrKNvcK-ZXY",
-  // authDomain: "prueba-fe655.firebaseapp.com",
-  // projectId: "prueba-fe655",
-  // storageBucket: "prueba-fe655.appspot.com",
-  // messagingSenderId: "259493365401",
-  // appId: "1:259493365401:web:ff3322745152fedcb15a08"
+  apiKey: "AIzaSyBMJB0CWO1EaBW6guLFRuGqVrKNvcK-ZXY",
+  authDomain: "prueba-fe655.firebaseapp.com",
+  projectId: "prueba-fe655",
+  storageBucket: "prueba-fe655.appspot.com",
+  messagingSenderId: "259493365401",
+  appId: "1:259493365401:web:ff3322745152fedcb15a08"
 
   // WhatsApp
 
@@ -28,12 +28,12 @@ const firebaseConfig = {
 
   //  whatsApp2
 
-  apiKey: "AIzaSyB8HEcCH5dX_kT9HBeSZrQKEAgp1ZShRpk",
-  authDomain: "whatsapp2-e4b4f.firebaseapp.com",
-  projectId: "whatsapp2-e4b4f",
-  storageBucket: "whatsapp2-e4b4f.appspot.com",
-  messagingSenderId: "659992234185",
-  appId: "1:659992234185:web:3e45532c9c33f0a4202518"
+  // apiKey: "AIzaSyB8HEcCH5dX_kT9HBeSZrQKEAgp1ZShRpk",
+  // authDomain: "whatsapp2-e4b4f.firebaseapp.com",
+  // projectId: "whatsapp2-e4b4f",
+  // storageBucket: "whatsapp2-e4b4f.appspot.com",
+  // messagingSenderId: "659992234185",
+  // appId: "1:659992234185:web:3e45532c9c33f0a4202518"
 };
 
 // Initialize Firebase
