@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
 import Chats from "./Chats";
 
 const Message = ({ nombre, idUsuario }) => {
-  const { setRegresar, funRegresar, regresar } = useContext(UserContext);
+  const { setRegresar, funRegresar, regresar,tema } = useContext(UserContext);
 
   const db = getFirestore();
 
@@ -132,7 +132,7 @@ const Message = ({ nombre, idUsuario }) => {
         </div>
       </div>
 
-      <div className="messages_usua_cont  overflow-y-scroll dark:fondoOscuro">
+      <div className={`messages_usua_cont  overflow-y-scroll  ${tema == 'light'?'messages_usua_cont':'fondoOscuro'}`}>
         <div className="p-1 flex flex-col px-[40px]">
           {liMessage.map((mess) =>
             mess.userid == idUsuario || mess.userid == activo ? (

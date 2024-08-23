@@ -22,6 +22,8 @@ const Provider = ({ children }) => {
   // useStates
   const [perfil, setPerfil] = useState(false)
   const [messageGuardado, setMessageGuardado] = useState("");
+  const [tema, setTema] = useState("light")
+  const [abrirTema, setAbrirTema] = useState(false)
 
   // resgistrar usuario
 
@@ -126,8 +128,8 @@ const Provider = ({ children }) => {
 
   // tema oscuro
 
-  const [tema, setTema] = useState("light")
-  const [abrirTema, setAbrirTema] = useState(false)
+  // const [tema, setTema] = useState("light")
+  // const [abrirTema, setAbrirTema] = useState(false)
 
   const cambiarTema = ()=>{
     setTema(tema == "light" ? "dark" : "light")
@@ -135,9 +137,9 @@ const Provider = ({ children }) => {
     console.log(tema)
     const handleTema = () => {
       if (tema == "dark") {
-        document.querySelector("html").classList.add("dark");
+        document.querySelector("body").classList.add("dark");
       } else {
-        document.querySelector("html").classList.remove("dark");
+        document.querySelector("body").classList.remove("dark");
       }
     };
     handleTema()

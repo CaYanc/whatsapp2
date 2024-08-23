@@ -115,8 +115,8 @@ const Perfil = () => {
           >
             <p className="text-[14px] text-black dark:text-white">Tema</p>
             <span className="text-[10px]">
-              {tema == "dark" ? "Oscuro" : "Claro"}
-            </span>{" "}
+              {tema == "light" ? "Oscuro" : "Claro"}
+            </span>
             <br />
             <span
               className={`cambiador_cont flex items-center justify-center ${
@@ -130,7 +130,7 @@ const Perfil = () => {
                 className="dark:bg-[#0F1C24] px-[20px] py-[5px] rounded-md text-white"
               >
                 Cambiar a <br />
-                {tema == "dark" ? "Claro" : "Oscuro"}
+                {tema == "light" ? "Claro" : "Oscuro"}
               </button>
             </span>
           </div>
